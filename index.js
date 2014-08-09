@@ -47,7 +47,7 @@ function escea(opts, app) {
           self.emit('register', new escea_switch(serial, self.em, self.escea_comms));
           self.emit('register', new escea_flameeffect(serial, self.em, self.escea_comms));
           self.emit('register', new escea_room(serial, self.em));
-          self.emit('register', new escea_target(serial, self.em));
+          self.emit('register', new escea_target(serial, self.em, self.escea_comms));
     });
  
    this._interval = setInterval(function() {
